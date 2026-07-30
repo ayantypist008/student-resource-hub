@@ -55,9 +55,9 @@ function parseFilename(filename: string) {
   const romanWords = nameOnly.match(/\b[IVXLivxl]+\b/g) || [];
 
   // First Roman numeral = class level (e.g. XII -> 12)
-  let classNumber: number | null = null;
+  let classNumber: number | null = null
   if (romanWords.length > 0) {
-    classNumber = romanToNumber(romanWords[0].toUpperCase());
+    classNumber = romanToNumber(romanWords[0]!.toUpperCase());
   }
 
   // If "Paper" appears, the Roman numeral right after it is the paper number
